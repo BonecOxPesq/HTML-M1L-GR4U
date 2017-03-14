@@ -1,24 +1,25 @@
-<ion-view view-title="Cadastre-se aqui!">
-    <ion-content>           
-        
-         <div class="list">
+<ion-view view-title="Cadastre-se aqui">
+       <ion-content>
+        <div class="list">
             <label class="item item-input item-stacked-label">
                 <span class="input-label">E-mail</span>
-                <input type="text" placeholder="E-mail">
+                <input type="text" placeholder="E-mail" gn-model="E-mail">
             </label>
             <label class="item item-input item-stacked-label">
                 <span class="input-label">Nome</span>
-                <input type="text" placeholder="Nome">
+                <input type="text" placeholder=" Nome" ng-model="Nome">
             </label>
              <label class="item item-input item-stacked-label">
                 <span class="input-label">Senha</span>
-                <input type="password" placeholder="Senha">
+                <input type="password" placeholder=" Senha" ng-model="Senha">
             </label>
-</div>
-<div class="padding">
-          <button class="button button-block button-balanced" href="#/cadastro">
-  Cadastrar-se
-</button>
-</div>
-    </ion-content>
-</ion-view>        
+        </div>
+            <div class="padding">
+                <button class="button button-block button-positive" ng-click="novoCadastro(email, senha)">
+                    Cadastre-se
+                </button>
+
+            </div>
+       </ion-content>
+            
+</ion-view> 
