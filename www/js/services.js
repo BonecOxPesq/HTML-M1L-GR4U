@@ -20,9 +20,9 @@ return {
 
 .factory("Login", function(Context)  {
 
-  return {
-    login: function(email, senha) {
-      firebase.auth().singInWithEmailAndPassword(email, senha)
+ return {
+    login: function(email, senha, callback) {
+      firebase.auth().signInWithEmailAndPassword(email, senha)
       .then(function() {
       callback();  
       })
@@ -35,10 +35,23 @@ return {
       .then(function() {
         callback();
     })
-    .cath(function(error) {
+    .catch(function(error) {
       callback(error)
     });
 
     }
   };
 })
+ 
+ .factory("Tarefas", function(Context){
+   return{
+     get: function(callback){
+       firebase.database().ref('tarefas').on('value', function(snapshot) {
+         callback(snapshot.val());
+
+       })
+       
+
+     }
+   }
+ }) 
