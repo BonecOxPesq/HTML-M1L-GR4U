@@ -50,6 +50,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     }
 
   })
+      .state('lojas', {
+    url: '/lojas',
+    views: {
+      'view-inicial': {
+        templateUrl: 'templates/lojas.html'
+     }
+    }
+
+  })
 
 
 
