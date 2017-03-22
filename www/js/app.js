@@ -60,6 +60,17 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
   })
 
+        .state('inicio', {
+    url: '/inicio',
+    views: {
+      'view-inicial': {
+        templateUrl: 'templates/inicio.html'
+     }
+    }
+
+  })
+
+
 
 
   $urlRouterProvider.otherwise('/login');
